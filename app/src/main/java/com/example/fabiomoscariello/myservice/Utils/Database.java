@@ -10,14 +10,14 @@ public class Database {
     private static DatabaseReference ISTANCE = null;
 
     private Database() {
-    };
+    }
 
     public static DatabaseReference getIstance() {
         Log.d(TAG,"Istanza Database avviata");
         if (ISTANCE == null) {
             ISTANCE = FirebaseDatabase.getInstance().getReference();
         }
-        return (ISTANCE);
+        return ISTANCE;
     }
 
 }
